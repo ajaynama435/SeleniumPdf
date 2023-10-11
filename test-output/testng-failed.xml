@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PDFAutomation]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"/>
+  <listeners>
+    <listener class-name="com.qa.utility.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.testscript.PdfValidation">
+        <methods>
+          <include name="PDFLoader"/>
+          <include name="quit"/>
+          <include name="readPdfContent"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.qa.testscript.PdfValidation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [PDFAutomation] -->

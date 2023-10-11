@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.pdfbox.multipdf.Splitter;
@@ -37,6 +39,10 @@ public class PdfValidation {
 
 	System.out.println("ajay");
 	}
+	
+	public static String timestamp() {
+		return new SimpleDateFormat("yyyy_MM_dd#HH_mm_ss").format(new Date());
+	}
 
 	@Test
 	public void PDFLoader() throws Exception {
@@ -62,11 +68,11 @@ public class PdfValidation {
 		System.out.println(timestamp);
 
 		List<PDDocument> splitPages=splitter.split(pdDocument);
-		int num=1;
+		//int num=1;
 		for(PDDocument myDoc:splitPages)
 		{
-			myDoc.save("D:\\file"+num+".pdf");
-			num++;
+			myDoc.save("E\\file"+timestamp()+".pdf");
+			//num++;
 			myDoc.close();
 		}
 
