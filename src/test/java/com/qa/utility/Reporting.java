@@ -1,18 +1,14 @@
 package com.qa.utility;
 
-import java.util.Objects;
-import java.io.File;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import org.testng.collections.Objects;
+
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.qa.testscript.TestBase;
 
 public class Reporting extends TestBase implements ITestListener {
@@ -49,22 +45,22 @@ public class Reporting extends TestBase implements ITestListener {
 
 	}
 
-	/*
-	 * @Override public void onTestFailure(ITestResult tr) {
-	 * System.out.println("Test is failed "+getTestMethodName(tr)); Object
-	 * testclass= tr.getInstance(); WebDriver wd = ((TestBase)testclass).driver;
-	 * 
-	 * String base64Screenshot
-	 * ="data:image/png;base64,"+((TakesScreenshot)Objects.requireNonNull(wd)).
-	 * getScreenshotAs(OutputType.BASE64);
-	 * 
-	 * ExtentTestManager.getTest().log(Status.FAIL," Test Failed ",
-	 * ExtentTestManager.getTest().addScreenCaptureFromBase64String(base64Screenshot
-	 * ).getModel().getMedia().get(0));
-	 * 
-	 * 
-	 * }
-	 */
+	
+	  @Override public void onTestFailure(ITestResult tr) {
+	  System.out.println("Test is failed "+getTestMethodName(tr)); Object
+	  testclass= tr.getInstance(); WebDriver wd = ((TestBase)testclass).driver;
+	  
+	  String base64Screenshot
+	  ="data:image/png;base64,"+((TakesScreenshot)Objects.requireNonNull(wd)).
+	  getScreenshotAs(OutputType.BASE64);
+	  
+	  ExtentTestManager.getTest().log(Status.FAIL," Test Failed ",
+	  ExtentTestManager.getTest().addScreenCaptureFromBase64String(base64Screenshot
+	  ).getModel().getMedia().get(0));
+	  
+	  
+	  }
+	 
 
 	@Override
 	public void onTestSkipped(ITestResult tr) {

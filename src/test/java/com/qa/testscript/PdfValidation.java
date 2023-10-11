@@ -122,17 +122,8 @@ public class PdfValidation {
 	}
 
 
-	public static void main(String[] args) throws Exception {
-		PdfValidation pdf=new PdfValidation();
-		pdf.setup();
-		pdf.PDFLoader();
-		pdf.readPdfContent();
-		
-		pdf.quit();
-		
-
 	}
 
 
 
-}
+
