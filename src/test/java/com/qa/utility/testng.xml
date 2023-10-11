@@ -5,8 +5,12 @@
 		value="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf" />
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.qa.testscript.TestBase" />
+		<!-- 	<class name="com.qa.testscript.TestBase" />
 			<class name="com.qa.testscript.TC01_PDFTextReaderandValidator"/>
+			<class name="com.qa.testscript.TC02_PDFPageSplitorAndValidator"/>
+			<class name="com.qa.testscript.TC03_PDFMultiRangePageSplitorAndValidator"/>
+			<class name="com.qa.testscript.TC04_PDFPagesCount"/>  -->
+			<class name="com.qa.testscript.PdfValidation"/>
 			
 		</classes>
 	</test> <!-- Test -->

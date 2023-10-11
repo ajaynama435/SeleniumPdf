@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-PDFAutomation" class="navigator-link">
-              <span class="suite-name border-failed">PDFAutomation</span>
+              <span class="suite-name border-passed">PDFAutomation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-PDFAutomation" class="navigator-link ">
-                    <span>C:\Users\saiku\git\SeleniumPdf\testng.xml</span>
+                    <span>C:\Users\saiku\git\SeleniumPdf\src\test\java\com\qa\utility\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-PDFAutomation" class="hide-methods failed suite-PDFAutomation"> (hide)</a> <!-- hide-methods failed suite-PDFAutomation -->
-                      <a href="#" panel-name="suite-PDFAutomation" class="show-methods failed suite-PDFAutomation"> (show)</a> <!-- show-methods failed suite-PDFAutomation -->
-                    </span>
-                    <div class="method-list-content failed suite-PDFAutomation">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-PDFAutomation" title="com.qa.testscript.TC01_PDFTextReaderandValidator" class="method navigator-link" hash-for-method="PDFTextReader">PDFTextReader</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-PDFAutomation -->
+                    <span class="method-stats">0 methods,   </span>
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,31 +104,10 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-PDFAutomation" class="panel PDFAutomation">
-          <div class="suite-PDFAutomation-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.qa.testscript.TC01_PDFTextReaderandValidator</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="PDFTextReader">
-                  </a> <!-- PDFTextReader -->
-                  <span class="method-name">PDFTextReader</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Parameter &apos;inputPDFUrl&apos; is required by @Test on method PDFTextReader but has not been marked @Optional or defined
-in C:\Users\saiku\git\SeleniumPdf\testng.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-PDFAutomation-class-failed -->
         </div> <!-- panel PDFAutomation -->
         <div panel-name="test-xml-PDFAutomation" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\saiku\git\SeleniumPdf\testng.xml</span>
+            <span class="header-content">C:\Users\saiku\git\SeleniumPdf\src\test\java\com\qa\utility\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -152,8 +117,7 @@ in C:\Users\saiku\git\SeleniumPdf\testng.xml
   &lt;parameter name=&quot;url&quot; value=&quot;https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.qa.testscript.TestBase&quot;/&gt;
-      &lt;class name=&quot;com.qa.testscript.TC01_PDFTextReaderandValidator&quot;/&gt;
+      &lt;class name=&quot;com.qa.testscript.PdfValidation&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- PDFAutomation --&gt;
@@ -167,7 +131,7 @@ in C:\Users\saiku\git\SeleniumPdf\testng.xml
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -193,11 +157,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
-data.setCell(0, 0, 0)
-data.setCell(0, 1, 'PDFTextReader')
-data.setCell(0, 2, 'com.qa.testscript.TC01_PDFTextReaderandValidator')
-data.setCell(0, 3, 0);
+data.addRows(0);
 window.suiteTableData['PDFAutomation']= { tableData: data, tableDiv: 'times-div-PDFAutomation'}
 return data;
 }
@@ -217,18 +177,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-PDFAutomation" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.qa.testscript.TC01_PDFTextReaderandValidator</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setup</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-PDFAutomation" class="panel">

@@ -61,7 +61,7 @@ public class PdfValidation {
 		int num=1;
 		for(PDDocument myDoc:splitPages)
 		{
-			myDoc.save("E:\\SeleniumPdf\\file"+num+".pdf");
+			myDoc.save("C:\\SeleniumPdf\\file"+num+".pdf");
 			num++;
 			myDoc.close();
 		}

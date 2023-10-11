@@ -116,9 +116,9 @@ public class PDFTextExtractor {
 
 		PDFTextExtractor extractor = new PDFTextExtractor();
 
-		//extractor.setup();
+		extractor.setup();
 
-		//extractor.PDFLoader();
+		extractor.PDFLoader();
 
 		//extractor.PDFTextExtracter();
 
