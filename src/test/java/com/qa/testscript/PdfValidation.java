@@ -1,4 +1,4 @@
-package seleniumPdf.SeleniumPdf;
+package com.qa.testscript;
 
 import java.io.BufferedInputStream;
 import java.io.File;
