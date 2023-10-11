@@ -1,0 +1,786 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/6</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Oct 11 20:22:11 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>57 seconds (57925 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscript.PDFTextExtractor.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.PDFTextExtractor<br>Parameters: public void com.qa.testscript.PDFTextExtractor.PDFTextExtracter() throws java.io.IOException, [TestResult name=PDFTextExtracter status=FAILURE method=PDFTextExtractor.PDFTextExtracter()[pri:0, instance:com.qa.testscript.PDFTextExtractor@6743e411] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1879000767", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1879000767'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.PDFTextExtractor@6743e411</td></tr>
+<tr>
+<td title='com.qa.testscript.TC02_PDFPageSplitorAndValidator.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC02_PDFPageSplitorAndValidator<br>Parameters: public void com.qa.testscript.TC02_PDFPageSplitorAndValidator.PDFPagesSpilor() throws java.lang.Exception, [TestResult name=PDFPagesSpilor status=SUCCESS method=TC02_PDFPageSplitorAndValidator.PDFPagesSpilor()[pri:0, instance:com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1939282277", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1939282277'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526</td></tr>
+<tr>
+<td title='com.qa.testscript.TC04_PDFPagesCount.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC04_PDFPagesCount<br>Parameters: public void com.qa.testscript.TC04_PDFPagesCount.PDFFilePagesCount() throws java.io.IOException, [TestResult name=PDFFilePagesCount status=SUCCESS method=TC04_PDFPagesCount.PDFFilePagesCount()[pri:0, instance:com.qa.testscript.TC04_PDFPagesCount@662ac478] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1753885705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1753885705'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC04_PDFPagesCount@662ac478</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles<br>Parameters: public void com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload(java.lang.String,java.lang.String) throws java.lang.Exception, [TestResult name=PDFFilesDownload status=FAILURE method=TC05_PDFMergeTwoFiles.PDFFilesDownload(java.lang.String,java.lang.String)[pri:0, instance:com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1096742104", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1096742104'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.TestBase.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TestBase<br>Parameters: public void com.qa.testscript.TestBase.demo(), [TestResult name=demo status=SUCCESS method=TestBase.demo()[pri:0, instance:com.qa.testscript.TestBase@10683d9d] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace950729555", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace950729555'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TestBase@10683d9d</td></tr>
+<tr>
+<td title='com.qa.testscript.TC01_PDFTextReaderandValidator.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC01_PDFTextReaderandValidator<br>Parameters: public void com.qa.testscript.TC01_PDFTextReaderandValidator.PDFContentComparsion() throws java.io.IOException, [TestResult name=PDFContentComparsion status=SUCCESS method=TC01_PDFTextReaderandValidator.PDFContentComparsion()[pri:0, instance:com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed] output={null}]</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1701388960", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1701388960'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscript.PDFTextExtractor.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.PDFTextExtractor</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.PDFTextExtractor@6743e411</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.TC01_PDFTextReaderandValidator.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC01_PDFTextReaderandValidator</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.TC04_PDFPagesCount.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC04_PDFPagesCount</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC04_PDFPagesCount@662ac478</td></tr>
+<tr>
+<td title='com.qa.testscript.TC02_PDFPageSplitorAndValidator.checkStatus()'><b>checkStatus</b><br>Test class: com.qa.testscript.TC02_PDFPageSplitorAndValidator</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526</td></tr>
+<tr>
+<td title='com.qa.testscript.PDFTextExtractor.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.PDFTextExtractor</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.PDFTextExtractor@6743e411</td></tr>
+<tr>
+<td title='com.qa.testscript.TC02_PDFPageSplitorAndValidator.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.TC02_PDFPageSplitorAndValidator</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526</td></tr>
+<tr>
+<td title='com.qa.testscript.TC01_PDFTextReaderandValidator.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.TC01_PDFTextReaderandValidator</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed</td></tr>
+<tr>
+<td title='com.qa.testscript.TestBase.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.TestBase</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TestBase@10683d9d</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.TC04_PDFPagesCount.tearDown()'><b>tearDown</b><br>Test class: com.qa.testscript.TC04_PDFPagesCount</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC04_PDFPagesCount@662ac478</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload()'><b>PDFFilesDownload</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles<br>Parameters: https://live-datastaxd8.pantheonsite.io/sites/default/files/content/ebook/2020-04/9781492079514%20%282%29.pdf, https://go.neo4j.com/rs/710-RRC-335/images/Graph-Databases-For-Dummies.pdf</td>
+<td><div><pre>java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:219)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1233)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1133)
+	at com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload(TC05_PDFMergeTwoFiles.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1916303325", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916303325'><pre>java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:219)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1233)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1133)
+	at com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload(TC05_PDFMergeTwoFiles.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>32</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.PDFTextExtractor.PDFTextExtracter()'><b>PDFTextExtracter</b><br>Test class: com.qa.testscript.PDFTextExtractor</td>
+<td><div><pre>java.lang.ClassCastException: class java.io.BufferedInputStream cannot be cast to class org.apache.pdfbox.io.RandomAccessRead (java.io.BufferedInputStream is in module java.base of loader &apos;bootstrap&apos;; org.apache.pdfbox.io.RandomAccessRead is in unnamed module of loader &apos;app&apos;)
+	at com.qa.testscript.PDFTextExtractor.PDFTextExtracter(PDFTextExtractor.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1761011037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1761011037'><pre>java.lang.ClassCastException: class java.io.BufferedInputStream cannot be cast to class org.apache.pdfbox.io.RandomAccessRead (java.io.BufferedInputStream is in module java.base of loader &apos;bootstrap&apos;; org.apache.pdfbox.io.RandomAccessRead is in unnamed module of loader &apos;app&apos;)
+	at com.qa.testscript.PDFTextExtractor.PDFTextExtracter(PDFTextExtractor.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.PDFTextExtractor@6743e411</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscript.TC01_PDFTextReaderandValidator.PDFContentComparsion()'><b>PDFContentComparsion</b><br>Test class: com.qa.testscript.TC01_PDFTextReaderandValidator</td>
+<td></td>
+<td>10</td>
+<td>com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed</td></tr>
+<tr>
+<td title='com.qa.testscript.TC02_PDFPageSplitorAndValidator.PDFPagesSpilor()'><b>PDFPagesSpilor</b><br>Test class: com.qa.testscript.TC02_PDFPageSplitorAndValidator</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526</td></tr>
+<tr>
+<td title='com.qa.testscript.TC04_PDFPagesCount.PDFFilePagesCount()'><b>PDFFilePagesCount</b><br>Test class: com.qa.testscript.TC04_PDFPagesCount</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TC04_PDFPagesCount@662ac478</td></tr>
+<tr>
+<td title='com.qa.testscript.TestBase.demo()'><b>demo</b><br>Test class: com.qa.testscript.TestBase</td>
+<td></td>
+<td>0</td>
+<td>com.qa.testscript.TestBase@10683d9d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscript.TC04_PDFPagesCount.demo()'><b>demo</b><br>Test class: com.qa.testscript.TC04_PDFPagesCount</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace912054991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace912054991'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC04_PDFPagesCount@662ac478</td></tr>
+<tr>
+<td title='com.qa.testscript.TC02_PDFPageSplitorAndValidator.demo()'><b>demo</b><br>Test class: com.qa.testscript.TC02_PDFPageSplitorAndValidator</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace390138887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390138887'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC02_PDFPageSplitorAndValidator@31190526</td></tr>
+<tr>
+<td title='com.qa.testscript.TC01_PDFTextReaderandValidator.demo()'><b>demo</b><br>Test class: com.qa.testscript.TC01_PDFTextReaderandValidator</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1495454697", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1495454697'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.pass(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC01_PDFTextReaderandValidator@229f66ed</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.demo()'><b>demo</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1419958638", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1419958638'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+<tr>
+<td title='com.qa.testscript.PDFTextExtractor.demo()'><b>demo</b><br>Test class: com.qa.testscript.PDFTextExtractor</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1655081931", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1655081931'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.PDFTextExtractor@6743e411</td></tr>
+<tr>
+<td title='com.qa.testscript.TC05_PDFMergeTwoFiles.PDFMergeFiles()'><b>PDFMergeFiles</b><br>Test class: com.qa.testscript.TC05_PDFMergeTwoFiles</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1398479590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1398479590'><pre>java.lang.NullPointerException: Cannot invoke &quot;com.aventstack.extentreports.ExtentTest.addScreenCaptureFromPath(String)&quot; because &quot;this.extentTest&quot; is null
+	at com.qa.testscript.TestBase.checkStatus(TestBase.java:93)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.qa.testscript.TC05_PDFMergeTwoFiles@477b4cdf</td></tr>
+</table><p>
+</body>
+</html>

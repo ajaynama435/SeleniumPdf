@@ -1,26 +1,37 @@
 package com.qa.testscript;
 
+import java.awt.Desktop;
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
-import java.util.List;
 
-import org.apache.pdfbox.multipdf.Splitter;
+import org.apache.commons.io.FileUtils;
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.text.PDFTextStripper;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class TestBase {
 
@@ -31,6 +42,9 @@ public class TestBase {
 	public PDDocument pddoc = null;
 	public String inputPDFUrl = "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
 	public Timestamp timestamp = null;
+	public static String screenshotsSubFolderName;
+	public  ExtentReports extentReports;
+	public  ExtentTest extentTest;
 
 	@BeforeClass
 	public void setup() throws Exception {
@@ -44,6 +58,8 @@ public class TestBase {
 		parseUrl = new URL(inputPDFUrl);
 		inputStream = parseUrl.openStream();
 		bufferedInputStream = new BufferedInputStream(inputStream);
+		
+		
 	}
 	
 	
@@ -71,6 +87,27 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
+	
+	public String captureScreenshot(String fileName) {
+		
+		if(screenshotsSubFolderName == null) {
+			LocalDateTime myDateObj = LocalDateTime.now();
+		    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss");
+		    screenshotsSubFolderName = myDateObj.format(myFormatObj);
+		}
+		
+		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		File destFile = new File("./Screenshots/"+ screenshotsSubFolderName+"/"+fileName);
+		try {
+			FileUtils.copyFile(sourceFile, destFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Screenshot saved successfully");
+		return destFile.getAbsolutePath();
+	}
+	
 	@Test
 	public void demo() {
 		
