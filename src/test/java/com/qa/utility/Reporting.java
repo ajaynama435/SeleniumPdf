@@ -45,21 +45,22 @@ public class Reporting extends TestBase implements ITestListener {
 
 	}
 
-	
-	  @Override public void onTestFailure(ITestResult tr) {
-	  System.out.println("Test is failed "+getTestMethodName(tr)); Object
-	  testclass= tr.getInstance(); WebDriver wd = ((TestBase)testclass).driver;
-	  
-	  String base64Screenshot
-	  ="data:image/png;base64,"+((TakesScreenshot)Objects.requireNonNull(wd)).
-	  getScreenshotAs(OutputType.BASE64);
-	  
-	  ExtentTestManager.getTest().log(Status.FAIL," Test Failed ",
-	  ExtentTestManager.getTest().addScreenCaptureFromBase64String(base64Screenshot
-	  ).getModel().getMedia().get(0));
-	  
-	  
-	  }
+	/*
+	 * @Override public void onTestFailure(ITestResult tr) {
+	 * System.out.println("Test is failed "+getTestMethodName(tr)); Object
+	 * testclass= tr.getInstance(); WebDriver wd = ((TestBase)testclass).driver;
+	 * 
+	 * String base64Screenshot
+	 * ="data:image/png;base64,"+((TakesScreenshot)Objects.requireNonNull(wd)).
+	 * getScreenshotAs(OutputType.BASE64);
+	 * 
+	 * ExtentTestManager.getTest().log(Status.FAIL," Test Failed ",
+	 * ExtentTestManager.getTest().addScreenCaptureFromBase64String(base64Screenshot
+	 * ).getModel().getMedia().get(0));
+	 * 
+	 * 
+	 * }
+	 */
 	 
 
 	@Override

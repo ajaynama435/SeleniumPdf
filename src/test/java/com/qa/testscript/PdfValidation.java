@@ -68,11 +68,11 @@ public class PdfValidation {
 		System.out.println(timestamp);
 
 		List<PDDocument> splitPages=splitter.split(pdDocument);
-		//int num=1;
+		int num=1;
 		for(PDDocument myDoc:splitPages)
 		{
-			myDoc.save("E\\file"+timestamp()+".pdf");
-			//num++;
+			myDoc.save("D://Splitfile-"+num+" "+timestamp()+".pdf");
+			num++;
 			myDoc.close();
 		}
 

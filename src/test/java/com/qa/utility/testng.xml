@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="PDFAutomation">
-	<listeners>
+	<!--<listeners>
 		<listener class-name="com.qa.utility.Reporting" />
-	</listeners>
+	</listeners> -->
 	<parameter name="url"
 		value="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf" />
 	<test thread-count="5" name="Test">
