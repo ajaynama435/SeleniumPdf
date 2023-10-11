@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [PDFAutomation]" guice-stage="DEVELOPMENT">
-  <parameter name="url" value="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"/>
+  <parameter name="SecondFileURL" value="https://go.neo4j.com/rs/710-RRC-335/images/Graph-Databases-For-Dummies.pdf"/>
+  <parameter name="FirstFileURL" value="https://live-datastaxd8.pantheonsite.io/sites/default/files/content/ebook/2020-04/9781492079514%20%282%29.pdf"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.qa.testscript.PdfValidation">
+      <class name="com.qa.testscript.TC05_PDFMergeTwoFiles">
         <methods>
-          <include name="PDFLoader"/>
-          <include name="quit"/>
+          <include name="tearDown"/>
+          <include name="PDFFilesDownload" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="PDFMergeFiles"/>
         </methods>
-      </class> <!-- com.qa.testscript.PdfValidation -->
+      </class> <!-- com.qa.testscript.TC05_PDFMergeTwoFiles -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [PDFAutomation] -->

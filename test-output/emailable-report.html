@@ -9,12 +9,38 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">PDFAutomation</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,681</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">56,481</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PDFAutomation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.qa.testscript.PdfValidation</td><td><a href="#m0">PDFLoader</a></td><td rowspan="1">1697008660514</td><td rowspan="1">488</td></tr><tr class="passedeven"><td><a href="#m1">readPdfContent</a></td><td rowspan="1">1697008661007</td><td rowspan="1">369</td></tr><tr class="passedeven"><td><a href="#m2">setup</a></td><td rowspan="1">1697008661379</td><td rowspan="1">3702</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PDFAutomation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.qa.testscript.TC05_PDFMergeTwoFiles</td><td><a href="#m0">PDFFilesDownload</a></td><td rowspan="1">1697028960825</td><td rowspan="1">20507</td></tr><tr class="failedeven"><td><a href="#m1">PDFMergeFiles</a></td><td rowspan="1">1697028981336</td><td rowspan="1">18161</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.qa.testscript.TC01_PDFTextReaderandValidator</td><td><a href="#m2">PDFContentComparsion</a></td><td rowspan="1">1697028947100</td><td rowspan="1">9594</td></tr><tr class="passedeven"><td><a href="#m3">demo</a></td><td rowspan="1">1697028956696</td><td rowspan="1">1</td></tr><tr class="passedodd"><td rowspan="2">com.qa.testscript.TC02_PDFPageSplitorAndValidator</td><td><a href="#m4">PDFPagesSpilor</a></td><td rowspan="1">1697028958103</td><td rowspan="1">52</td></tr><tr class="passedodd"><td><a href="#m5">demo</a></td><td rowspan="1">1697028958156</td><td rowspan="1">1</td></tr><tr class="passedeven"><td rowspan="2">com.qa.testscript.TC04_PDFPagesCount</td><td><a href="#m6">PDFFilePagesCount</a></td><td rowspan="1">1697028959500</td><td rowspan="1">14</td></tr><tr class="passedeven"><td><a href="#m7">demo</a></td><td rowspan="1">1697028959517</td><td rowspan="1">1</td></tr><tr class="passedodd"><td rowspan="1">com.qa.testscript.TC05_PDFMergeTwoFiles</td><td><a href="#m8">demo</a></td><td rowspan="1">1697028999500</td><td rowspan="1">1</td></tr><tr class="passedeven"><td rowspan="1">com.qa.testscript.TestBase2</td><td><a href="#m9">demo</a></td><td rowspan="1">1697028945733</td><td rowspan="1">6</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.qa.testscript.PdfValidation#PDFLoader</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.testscript.PdfValidation#readPdfContent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.testscript.PdfValidation#setup</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">com.qa.testscript.TC05_PDFMergeTwoFiles#PDFFilesDownload</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>https://live-datastaxd8.pantheonsite.io/sites/default/files/content/ebook/2020-04/9781492079514%20%282%29.pdf</td><td>https://go.neo4j.com/rs/710-RRC-335/images/Graph-Databases-For-Dummies.pdf</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:219)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1233)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1133)
+	at com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload(TC05_PDFMergeTwoFiles.java:63)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.qa.testscript.TC05_PDFMergeTwoFiles#PDFMergeFiles</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.IOException: Error: End-of-File, expected line at offset 0
+	at org.apache.pdfbox.pdfparser.BaseParser.readLine(BaseParser.java:1124)
+	at org.apache.pdfbox.pdfparser.COSParser.parseHeader(COSParser.java:2650)
+	at org.apache.pdfbox.pdfparser.COSParser.parsePDFHeader(COSParser.java:2633)
+	at org.apache.pdfbox.pdfparser.PDFParser.parse(PDFParser.java:219)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1233)
+	at org.apache.pdfbox.pdmodel.PDDocument.load(PDDocument.java:1133)
+	at com.qa.testscript.TC05_PDFMergeTwoFiles.PDFFilesDownload(TC05_PDFMergeTwoFiles.java:63)
+	at com.qa.testscript.TC05_PDFMergeTwoFiles.PDFMergeFiles(TC05_PDFMergeTwoFiles.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.testscript.TC01_PDFTextReaderandValidator#PDFContentComparsion</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.qa.testscript.TC01_PDFTextReaderandValidator#demo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.qa.testscript.TC02_PDFPageSplitorAndValidator#PDFPagesSpilor</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.qa.testscript.TC02_PDFPageSplitorAndValidator#demo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.qa.testscript.TC04_PDFPagesCount#PDFFilePagesCount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.qa.testscript.TC04_PDFPagesCount#demo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.qa.testscript.TC05_PDFMergeTwoFiles#demo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.qa.testscript.TestBase2#demo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

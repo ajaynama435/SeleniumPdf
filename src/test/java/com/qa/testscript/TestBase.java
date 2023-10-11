@@ -7,37 +7,35 @@ import java.net.URL;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 public class TestBase {
-
 
 	public WebDriver driver = null;
 	public URL parseUrl = null;
 	public InputStream inputStream = null;
 	public BufferedInputStream bufferedInputStream = null;
 	public PDDocument pddoc = null;
+	public String inputPDFUrl = "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
 
-	@Parameters("inputPDFUrl")
-	@BeforeTest
+	@BeforeClass
 	public void setup(String inputPDFUrl) {
 		System.out.println("Started");
 		/*
-		 * ChromeOptions chromeOptions = new ChromeOptions();
 		 * chromeOptions.setHeadless(true); driver = new ChromeDriver(chromeOptions);
 		 */
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(inputPDFUrl);
 	}
-    
-    
-	@AfterTest
+
+	@AfterClass
 	public void tearDown() {
 		try {
-			if(driver != null) {
+			if (driver != null) {
 				driver.close();
 				driver.quit();
 			}

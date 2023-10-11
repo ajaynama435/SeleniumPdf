@@ -1,30 +1,30 @@
 package com.qa.testscript;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.testng.annotations.Parameters;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC01_PDFTextReaderandValidator extends TestBase {
-	TestBase base;
-	@Parameters("inputPDFUrl")
-	@Test
-	public void PDFTextReader(String inputPDFUrl) {
-		try {
-			parseUrl = new URL(inputPDFUrl);
-			inputStream = parseUrl.openStream();
-			bufferedInputStream = new BufferedInputStream(inputStream);
-			pddoc.load(bufferedInputStream);
+public class TC01_PDFTextReaderandValidator extends TestBase2 {
 
-		} catch (MalformedURLException e) {			
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	@Test
+	public void PDFContentComparsion() throws IOException {
+
+		PDDocument pddoc = PDDocument.load(bufferedInputStream);
+		int pageCount = pddoc.getNumberOfPages();
+		Assert.assertEquals(pageCount, 4);
+		PDFTextStripper pdfStripper = new PDFTextStripper();
+		String pdfTextSaverVariableOne = pdfStripper.getText(pddoc);
+		//System.out.println(pdfTextSaverVariableOne);
+		Assert.assertTrue(pdfTextSaverVariableOne.contains("Secondary bookmarks in a PDF file."));
+		Assert.assertTrue(pdfTextSaverVariableOne.contains("Accelio Present Applied Technology"));
+		sleep();
+		pdfStripper.setStartPage(1);
+		String pdfTextSaverVariableTwo= pdfStripper.getText(pddoc);
+		Assert.assertTrue(pdfTextSaverVariableTwo.contains("Sample Data File "));
+		pddoc.close();
+
 	}
 }
-
-
