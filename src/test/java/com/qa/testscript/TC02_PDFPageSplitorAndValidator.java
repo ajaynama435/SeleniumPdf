@@ -7,7 +7,7 @@ import org.apache.pdfbox.multipdf.Splitter;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.testng.annotations.Test;
 
-public class TC02_PDFPageSplitorAndValidator extends TestBase2 {
+public class TC02_PDFPageSplitorAndValidator extends TestBase {
 
 	@Test
 	public void PDFPagesSpilor() throws Exception {

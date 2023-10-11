@@ -13,7 +13,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 @Test
-public class TC05_PDFMergeTwoFiles extends TestBase2 {
+public class TC05_PDFMergeTwoFiles extends TestBase {
 	
 	private URL  fristFileDownloadURL = null;
 	private URL  secondFileDownloadURL = null;

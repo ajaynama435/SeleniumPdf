@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.testng.annotations.Test;
 
-public class TC04_PDFPagesCount extends TestBase2{
+public class TC04_PDFPagesCount extends TestBase{
 	
 	private int pageCount = 0;
 	

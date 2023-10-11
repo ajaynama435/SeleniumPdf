@@ -2,7 +2,9 @@ package com.qa.utility;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentManager {
@@ -16,13 +18,16 @@ public class ExtentManager {
 	    public synchronized static  ExtentReports CreateExtentReports() {
 	    	
 	       ExtentSparkReporter reporter = new ExtentSparkReporter("./Reports/Test-Report-"+timestamp()+".html");
-	       reporter.config().setReportName("Sample Extent Report");
+	       reporter.config().setReportName("PDF Automation - Validation & Comparsion Extent Report");
 	       extentrep.attachReporter(reporter);
-	       extentrep.setSystemInfo("Website name", "Beta Spicejet");
+	       extentrep.setSystemInfo("Website name", "PDF Automation");
 	       
 
 	       return extentrep;
 	    }
 	   
+	    
+	 
+
 	
 }

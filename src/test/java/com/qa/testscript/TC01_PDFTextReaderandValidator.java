@@ -7,7 +7,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC01_PDFTextReaderandValidator extends TestBase2 {
+public class TC01_PDFTextReaderandValidator extends TestBase {
 
 	@Test
 	public void PDFContentComparsion() throws IOException {
