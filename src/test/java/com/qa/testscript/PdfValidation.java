@@ -15,12 +15,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
 
 public class PdfValidation {
 	Timestamp timestamp = null;
 	WebDriver driver;
 	String url="https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
 
+	@Test
 	public void setup() throws InterruptedException
 	{ChromeOptions chromeOptions = new ChromeOptions();
 
@@ -35,6 +38,7 @@ public class PdfValidation {
 	System.out.println("ajay");
 	}
 
+	@Test
 	public void PDFLoader() throws Exception {
 
 
@@ -61,7 +65,7 @@ public class PdfValidation {
 		int num=1;
 		for(PDDocument myDoc:splitPages)
 		{
-			myDoc.save("C:\\SeleniumPdf\\file"+num+".pdf");
+			myDoc.save("D:\\file"+num+".pdf");
 			num++;
 			myDoc.close();
 		}
@@ -71,7 +75,7 @@ public class PdfValidation {
 	}
 	
 		
-	
+	@Test
 	public void readPdfContent() throws IOException
 	{
 		URL pdfurl= new URL(url);
@@ -105,6 +109,7 @@ public class PdfValidation {
 
 
 
+	@AfterTest
 	public void quit()
 	{
 		driver.quit();
